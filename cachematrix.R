@@ -1,14 +1,26 @@
-## Put comments here that give an overall description of what your
-## functions do
+### In this Programming Assignment we will learn about 
+### caching the INVERSE value of a given vector input.
+### We will learn about <<- operator as well.
+### This program contains two fucntions namely
+###   a. makeCacheMatrix
+###   b. cacheSolve
 
-## Write a short comment describing this function
+
+### makeCacheMatrix() functions cache the INVERSE
+###   a. Sets the value of the Vector
+###   b. Gets the value of the Vector
+###   c. Sets the value of the Inverse
+###   d. Gets the value of the Inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 
 }
 
 
-## Write a short comment describing this function
+### cacheSolve() function calculates the inverse of the special vector.
+### Before calculating,it checks whether the inverse is already calculated
+### If YES, it gets the inverse value from Cache and skips computation
+### If NO, it computes inverse value and sets the same in cache.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
