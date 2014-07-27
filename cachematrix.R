@@ -38,10 +38,22 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ### cacheSolve() function calculates the inverse of the special vector.
-### Before calculating,it checks whether the inverse is already calculated
+### Before calculating, it checks whether the inverse is already calculated
 ### If YES, it gets the inverse value from Cache and skips computation
 ### If NO, it computes inverse value and sets the same in cache.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+
+	inv <- x$getInverse()
+
+	if (!is.null(inv) {
+		return (inv)
+	}
+
+	data <- x$get()
+	inv <- solve(data) %% data
+	x$setInverse(inv)
+
+	inv
 }
